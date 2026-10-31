@@ -29,6 +29,7 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
+
 body{
 margin:0;
 background:var(--bg);
@@ -37,6 +38,7 @@ font-family:Manrope,system-ui,sans-serif;
 line-height:1.6;
 overflow-x:hidden;
 }
+
 body:before{
 content:"";
 position:fixed;
@@ -47,6 +49,7 @@ background:
 radial-gradient(ellipse at 80% -10%,rgba(255,220,65,.12),transparent 36%),
 radial-gradient(ellipse at 0% 45%,rgba(255,190,45,.045),transparent 30%);
 }
+
 a{color:inherit;text-decoration:none}
 button,input,textarea,select{font:inherit}
 button{cursor:pointer}
@@ -72,6 +75,7 @@ background:rgba(9,10,13,.86);
 backdrop-filter:blur(18px);
 border-bottom:1px solid var(--line);
 }
+
 .nav{
 height:76px;
 display:flex;
@@ -79,6 +83,7 @@ align-items:center;
 justify-content:space-between;
 gap:20px;
 }
+
 .brand{
 display:flex;
 align-items:center;
@@ -87,6 +92,7 @@ font-weight:900;
 letter-spacing:.07em;
 font-size:15px;
 }
+
 .brand-icon{
 width:42px;
 height:42px;
@@ -98,12 +104,14 @@ color:#17140b;
 font-size:24px;
 box-shadow:0 0 30px #ffda4933;
 }
+
 .brand small{
 display:block;
 color:#8d9099;
 font-size:9px;
 letter-spacing:.22em;
 }
+
 .nav-links{
 display:flex;
 align-items:center;
@@ -112,6 +120,7 @@ color:#b9bbc4;
 font-size:12px;
 font-weight:800;
 }
+
 .nav-links a{transition:.2s}
 .nav-links a:hover{color:var(--yellow)}
 
@@ -127,20 +136,25 @@ font-size:12px;
 font-weight:900;
 transition:.2s;
 }
+
 .button.primary{
 background:var(--yellow);
 color:#17140a;
 }
+
 .button.primary:hover{
 background:#fff078;
 transform:translateY(-2px);
 }
+
 .button.ghost{
 border-color:var(--line);
 background:#ffffff08;
 color:var(--white);
 }
+
 .button.ghost:hover{border-color:#ffe34f77}
+
 .menu-btn{
 display:none;
 background:#ffffff0a;
@@ -158,12 +172,14 @@ display:flex;
 align-items:center;
 padding:65px 0;
 }
+
 .hero-grid{
 display:grid;
 grid-template-columns:1.15fr .85fr;
 align-items:center;
 gap:30px;
 }
+
 .tag{
 display:inline-flex;
 align-items:center;
@@ -174,6 +190,7 @@ font-weight:900;
 letter-spacing:.2em;
 text-transform:uppercase;
 }
+
 .tag:before{
 content:"";
 width:7px;
@@ -182,6 +199,7 @@ background:var(--yellow);
 border-radius:50%;
 box-shadow:0 0 13px var(--yellow);
 }
+
 h1{
 font-size:clamp(54px,7.6vw,94px);
 line-height:.94;
@@ -189,22 +207,26 @@ letter-spacing:-.075em;
 margin:23px 0;
 font-weight:900;
 }
+
 h1 .accent{
 color:var(--yellow);
 text-shadow:0 0 38px #ffe34f30;
 }
+
 .hero-copy{
 max-width:550px;
 color:#a9acb6;
 font-size:15px;
 line-height:1.85;
 }
+
 .hero-actions{
 display:flex;
 gap:11px;
 flex-wrap:wrap;
 margin-top:29px;
 }
+
 .hero-foot{
 display:flex;
 gap:25px;
@@ -216,6 +238,7 @@ color:var(--muted);
 font-size:10px;
 letter-spacing:.08em;
 }
+
 .hero-foot b{
 display:block;
 color:white;
@@ -223,12 +246,14 @@ font-size:12px;
 margin-top:4px;
 letter-spacing:0;
 }
+
 .hero-art{
 height:390px;
 position:relative;
 display:grid;
 place-items:center;
 }
+
 .orb{
 width:min(320px,75vw);
 aspect-ratio:1;
@@ -238,6 +263,7 @@ box-shadow:0 0 70px #ffd94225,inset -30px -30px 70px #0008;
 animation:float 6s ease-in-out infinite;
 position:relative;
 }
+
 .orb:before,.orb:after{
 content:"";
 position:absolute;
@@ -246,11 +272,13 @@ border:1px solid #ffe34f40;
 border-radius:50%;
 transform:rotateX(68deg) rotate(-20deg);
 }
+
 .orb:after{
 inset:-55px;
 transform:rotateX(68deg) rotate(35deg);
 border-color:#ffe34f22;
 }
+
 .orb-core{
 position:absolute;
 inset:0;
@@ -260,6 +288,7 @@ font-size:140px;
 color:#201a0a;
 text-shadow:0 9px 0 #9e6d14;
 }
+
 .floating{
 position:absolute;
 padding:13px 16px;
@@ -271,19 +300,23 @@ box-shadow:var(--shadow);
 font-size:11px;
 font-weight:800;
 }
+
 .floating small{
 display:block;
 color:var(--muted);
 font-size:9px;
 font-weight:600;
 }
+
 .float-one{top:35px;right:0}
 .float-two{bottom:35px;left:0}
+
 @keyframes float{50%{transform:translateY(-13px) rotate(3deg)}}
 
 /* SECTIONS */
 
 .section{padding:65px 0}
+
 .section-head{
 display:flex;
 justify-content:space-between;
@@ -291,6 +324,7 @@ align-items:end;
 gap:20px;
 margin-bottom:25px;
 }
+
 .overline{
 font-size:9px;
 color:var(--yellow);
@@ -298,12 +332,14 @@ font-weight:900;
 letter-spacing:.22em;
 text-transform:uppercase;
 }
+
 .section-title{
 font-size:clamp(28px,4vw,42px);
 letter-spacing:-.055em;
 margin:7px 0 0;
 font-weight:900;
 }
+
 .section-note{
 color:var(--muted);
 font-size:11px;
@@ -317,6 +353,7 @@ display:grid;
 grid-template-columns:minmax(0,1.75fr) minmax(260px,.75fr);
 gap:15px;
 }
+
 .panel{
 border:1px solid var(--line);
 border-radius:var(--radius);
@@ -324,6 +361,7 @@ overflow:hidden;
 background:linear-gradient(145deg,#171a22,#101217);
 box-shadow:var(--shadow);
 }
+
 .panel-head{
 height:56px;
 padding:0 18px;
@@ -334,11 +372,13 @@ border-bottom:1px solid var(--line);
 font-size:11px;
 font-weight:900;
 }
+
 .player{
 aspect-ratio:16/9;
 background:#050609;
 position:relative;
 }
+
 .player iframe{
 position:absolute;
 inset:0;
@@ -346,6 +386,7 @@ width:100%;
 height:100%;
 border:0;
 }
+
 .embed-message{
 position:absolute;
 inset:0;
@@ -357,12 +398,14 @@ color:var(--muted);
 font-size:12px;
 background:radial-gradient(circle,#ffe34f10,transparent 60%);
 }
+
 .embed-message b{
 display:block;
 color:#fff;
 font-size:17px;
 margin-bottom:7px;
 }
+
 .panel-foot{
 display:flex;
 align-items:center;
@@ -370,14 +413,18 @@ justify-content:space-between;
 gap:12px;
 padding:14px 17px;
 }
+
 .panel-foot span{color:var(--muted);font-size:10px}
+
 .chat-panel{display:flex;flex-direction:column}
+
 .chat-window{
 min-height:320px;
 background:#090a0e;
 position:relative;
 flex:1;
 }
+
 .chat-window iframe{
 width:100%;
 height:100%;
@@ -395,12 +442,14 @@ grid-template-columns:repeat(3,1fr);
 gap:12px;
 margin-bottom:15px;
 }
+
 .stat{
 border:1px solid var(--line);
 border-radius:15px;
 background:linear-gradient(145deg,#171a22,#101217);
 padding:16px 18px;
 }
+
 .stat-label{
 font-size:9px;
 letter-spacing:.15em;
@@ -408,12 +457,15 @@ color:var(--muted);
 font-weight:900;
 text-transform:uppercase;
 }
+
 .stat-value{
 font-size:22px;
 font-weight:900;
 margin-top:5px;
 }
+
 .stat-sub{font-size:10px;color:var(--muted);margin-top:2px}
+
 .live-banner{
 display:none;
 align-items:center;
@@ -425,9 +477,12 @@ border-radius:15px;
 background:linear-gradient(100deg,#421c24aa,#1b171b);
 margin-bottom:14px;
 }
+
 .live-banner.active{display:flex}
+
 .live-banner strong{font-size:12px}
 .live-banner p{margin:3px 0 0;color:#d2b9bd;font-size:11px}
+
 .live-dot{
 display:inline-block;
 width:8px;
@@ -447,6 +502,7 @@ flex-wrap:wrap;
 align-items:center;
 margin-bottom:20px;
 }
+
 .filter-btn{
 border:1px solid var(--line);
 background:#ffffff08;
@@ -456,16 +512,19 @@ border-radius:10px;
 font-size:11px;
 font-weight:900;
 }
+
 .filter-btn.active{
 background:var(--yellow);
 color:#17140a;
 border-color:var(--yellow);
 }
+
 .posts-grid{
 display:grid;
 grid-template-columns:repeat(3,minmax(0,1fr));
 gap:16px;
 }
+
 .post-card{
 border:1px solid var(--line);
 border-radius:18px;
@@ -474,10 +533,12 @@ overflow:hidden;
 transition:.22s;
 position:relative;
 }
+
 .post-card:hover{
 transform:translateY(-4px);
 border-color:#ffe34f55;
 }
+
 .post-image{
 width:100%;
 aspect-ratio:16/9;
@@ -485,7 +546,9 @@ object-fit:cover;
 display:block;
 background:#090a0d;
 }
+
 .post-body{padding:18px}
+
 .post-type{
 display:inline-block;
 padding:5px 9px;
@@ -498,10 +561,12 @@ background:#ffe34f14;
 color:var(--yellow);
 margin-bottom:10px;
 }
+
 .post-type.news{background:#65a9ff16;color:#7dbaff}
 .post-type.announcement{background:#ffb45416;color:#ffca7a}
 .post-type.stream{background:#ff646e16;color:#ff8d95}
 .post-type.game{background:#79e3a216;color:#79e3a2}
+
 .post-title{
 font-size:16px;
 font-weight:900;
@@ -509,6 +574,7 @@ line-height:1.4;
 margin:0 0 9px;
 overflow-wrap:anywhere;
 }
+
 .post-content{
 font-size:12px;
 color:#a9acb6;
@@ -516,366 +582,537 @@ line-height:1.8;
 white-space:pre-wrap;
 overflow-wrap:anywhere;
 }
+
 .post-date{
 color:#737986;
 font-size:10px;
 margin-top:14px;
 }
+
 .pinned-label{
 position:absolute;
 top:12px;
 left:12px;
-background:var(--yellow);
-color:#17140a;
-font-size:10px;
-font-weight:900;
-padding:6px 9px;
-border-radius:7px;
 z-index:2;
+background:var(--yellow);
+color:#15130a;
+padding:6px 9px;
+border-radius:8px;
+font-size:9px;
+font-weight:900;
 }
+
 .posts-empty{
-grid-column:1/-1;
+padding:35px;
 border:1px dashed var(--line);
-border-radius:17px;
-padding:35px 20px;
+border-radius:16px;
 text-align:center;
 color:var(--muted);
 font-size:12px;
-}
-.posts-loading{
 grid-column:1/-1;
-text-align:center;
-padding:30px;
+}
+
+.posts-loading{
+padding:25px;
 color:var(--muted);
+text-align:center;
 font-size:12px;
+grid-column:1/-1;
 }
 
 /* CLIPS */
 
 .clips-grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px;
+grid-template-columns:repeat(3,minmax(0,1fr));
+gap:16px;
 }
+
 .clip-card{
 border:1px solid var(--line);
-border-radius:17px;
+border-radius:16px;
 overflow:hidden;
 background:var(--surface);
-transition:.22s;
-}
-.clip-card:hover{transform:translateY(-4px);border-color:#ffe34f66}
-.clip-thumb{aspect-ratio:16/9;background:#090a0d;position:relative}
-.clip-thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.clip-info{padding:13px}
-.clip-title{font-size:12px;font-weight:850;line-height:1.45}
-.clip-meta{
-display:flex;
-justify-content:space-between;
-gap:8px;
-color:var(--muted);
-font-size:9px;
-margin-top:9px;
+transition:.2s;
 }
 
-/* FEATURES */
+.clip-card:hover{
+transform:translateY(-4px);
+border-color:#ffe34f55;
+}
 
-.feature-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px;
+.clip-image{
+aspect-ratio:16/9;
+position:relative;
+background:#111319;
 }
-.feature{
-padding:24px;
-border:1px solid var(--line);
-border-radius:18px;
-background:linear-gradient(145deg,#171a22,#101217);
-min-height:170px;
+
+.clip-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
 }
-.feature-icon{
-width:45px;
-height:45px;
-border-radius:14px;
-background:#ffe34f13;
-color:var(--yellow);
+
+.clip-play{
+position:absolute;
+inset:0;
 display:grid;
 place-items:center;
-font-size:21px;
-margin-bottom:20px;
+font-size:32px;
+text-shadow:0 3px 15px #000;
 }
-.feature h3{font-size:15px;margin:0 0 7px}
-.feature p{font-size:11px;line-height:1.8;color:var(--muted);margin:0}
+
+.clip-body{padding:15px}
+
+.clip-title{
+font-size:12px;
+font-weight:900;
+line-height:1.5;
+margin:0;
+}
+
+.clip-meta{
+font-size:10px;
+color:var(--muted);
+margin-top:8px;
+}
+
+/* ABOUT */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:start;
+}
+
+.about-copy{
+font-size:13px;
+color:#a9acb6;
+line-height:1.9;
+}
+
+.about-copy strong{color:white}
+
+.about-cards{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.about-card{
+border:1px solid var(--line);
+background:linear-gradient(145deg,#171a22,#101217);
+border-radius:15px;
+padding:18px;
+}
+
+.about-card-icon{font-size:22px}
+
+.about-card h3{
+font-size:12px;
+font-weight:900;
+margin:8px 0 5px;
+}
+
+.about-card p{
+font-size:10px;
+color:var(--muted);
+margin:0;
+line-height:1.7;
+}
 
 /* GAMES */
 
 .games-grid{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:14px;
+grid-template-columns:repeat(4,minmax(0,1fr));
+gap:12px;
 }
-.game{
-position:relative;
-min-height:170px;
-padding:21px;
+
+.game-card{
 border:1px solid var(--line);
-border-radius:18px;
-overflow:hidden;
-background:linear-gradient(145deg,#1b1d25,#111319);
+background:linear-gradient(145deg,#171a22,#101217);
+border-radius:15px;
+padding:20px;
+text-align:center;
+transition:.2s;
 }
-.game-index{
-font-size:9px;
-color:var(--yellow);
+
+.game-card:hover{
+border-color:#ffe34f55;
+transform:translateY(-3px);
+}
+
+.game-icon{font-size:30px}
+
+.game-card h3{
+font-size:12px;
+margin:10px 0 4px;
 font-weight:900;
-letter-spacing:.18em;
-margin-bottom:30px;
 }
-.game h3{font-size:15px;margin:0 0 7px}
-.game p{font-size:11px;color:var(--muted);margin:0}
+
+.game-card p{
+font-size:10px;
+color:var(--muted);
+margin:0;
+}
 
 /* SCHEDULE */
 
 .schedule-grid{
 display:grid;
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(4,minmax(0,1fr));
 gap:12px;
 }
-.day{
-padding:19px;
+
+.schedule-card{
 border:1px solid var(--line);
-border-radius:16px;
-background:var(--surface);
+background:linear-gradient(145deg,#171a22,#101217);
+border-radius:15px;
+padding:18px;
 }
-.day span{
+
+.schedule-day{
 font-size:9px;
-letter-spacing:.16em;
-color:var(--yellow);
 font-weight:900;
+color:var(--muted);
+letter-spacing:.13em;
+text-transform:uppercase;
 }
-.day h3{font-size:20px;margin:9px 0 2px}
-.day p{color:var(--muted);font-size:10px;margin:0}
+
+.schedule-time{
+font-size:20px;
+font-weight:900;
+color:var(--yellow);
+margin-top:7px;
+}
 
 /* COMMUNITY */
 
-.community{
-padding:36px;
-border-radius:24px;
-border:1px solid #ffe34f33;
-background:radial-gradient(ellipse at 85% 10%,#ffe34f20,transparent 42%),linear-gradient(120deg,#1d1b12,#13151a);
+.community-box{
+border:1px solid #ffe34f30;
+background:linear-gradient(120deg,#ffe34f0c,#171a22);
+border-radius:22px;
+padding:35px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:25px;
+}
+
+.community-box h2{
+font-size:clamp(24px,4vw,38px);
+line-height:1.15;
+letter-spacing:-.05em;
+margin:0 0 10px;
+}
+
+.community-box p{
+color:var(--muted);
+font-size:12px;
+margin:0;
+max-width:500px;
+}
+
+/* FOOTER */
+
+footer{
+border-top:1px solid var(--line);
+padding:30px 0;
+margin-top:40px;
+}
+
+.footer-inner{
 display:flex;
 justify-content:space-between;
 align-items:center;
-gap:25px;
+gap:20px;
+flex-wrap:wrap;
 }
-.community h2{font-size:clamp(25px,4vw,39px);margin:7px 0}
-.community p{font-size:11px;color:var(--muted);max-width:520px}
-.social-links{display:flex;gap:9px;flex-wrap:wrap}
-.social-links a{
-border:1px solid var(--line);
-background:#ffffff08;
-padding:11px 14px;
-border-radius:11px;
-font-size:11px;
-font-weight:800;
+
+.footer-brand{
+font-size:12px;
+font-weight:900;
+letter-spacing:.1em;
+}
+
+.footer-note{
+font-size:10px;
+color:var(--muted);
 }
 
 /* ADMIN */
 
 .admin-open{
 position:fixed;
-left:18px;
-bottom:18px;
-z-index:35;
-border:1px solid #ffe34f66;
-background:#15171d;
+right:20px;
+bottom:20px;
+z-index:80;
+border:1px solid #ffe34f55;
+background:#171a22;
 color:var(--yellow);
 border-radius:13px;
-padding:11px 14px;
+padding:12px 16px;
 font-size:11px;
 font-weight:900;
 box-shadow:var(--shadow);
 }
+
 .admin-modal{
 position:fixed;
 inset:0;
-background:#000b;
-z-index:80;
+z-index:100;
 display:none;
-place-items:center;
-padding:18px;
+align-items:center;
+justify-content:center;
+padding:20px;
+background:#000b;
+backdrop-filter:blur(12px);
 }
-.admin-modal.open{display:grid}
+
+.admin-modal.open{display:flex}
+
 .admin-box{
 width:min(720px,100%);
-max-height:92vh;
+max-height:90vh;
 overflow:auto;
+background:#111319;
 border:1px solid var(--line);
-border-radius:20px;
-background:#13161d;
-padding:22px;
+border-radius:22px;
+padding:25px;
 box-shadow:var(--shadow);
 }
+
 .admin-head{
 display:flex;
-align-items:center;
 justify-content:space-between;
-margin-bottom:16px;
+align-items:center;
+gap:15px;
+margin-bottom:20px;
 }
-.admin-head h3{margin:0;font-size:18px}
+
+.admin-head h3{
+margin:0;
+font-size:17px;
+font-weight:900;
+}
+
 .admin-close{
-background:#ffffff0d;
-color:white;
-border:1px solid var(--line);
-border-radius:9px;
-padding:7px 11px;
-}
-.admin-field{display:grid;gap:6px;margin:12px 0}
-.admin-field label{
-font-size:10px;
-color:var(--muted);
-font-weight:800;
-letter-spacing:.08em;
-}
-.admin-field input,.admin-field textarea,.admin-field select{
-width:100%;
-background:#090b10;
-color:white;
+width:35px;
+height:35px;
+display:grid;
+place-items:center;
 border:1px solid var(--line);
 border-radius:10px;
-padding:11px;
-font-size:12px;
-outline:none;
+background:#ffffff08;
+color:white;
+font-size:16px;
 }
-.admin-field textarea{min-height:110px;resize:vertical}
-.admin-field input:focus,.admin-field textarea:focus{border-color:#ffe34f88}
+
+.admin-field{margin-bottom:15px}
+
+.admin-field label{
+display:block;
+font-size:9px;
+font-weight:900;
+letter-spacing:.13em;
+color:var(--muted);
+margin-bottom:7px;
+}
+
+.admin-field input,
+.admin-field textarea,
+.admin-field select{
+width:100%;
+border:1px solid var(--line);
+border-radius:11px;
+background:#090a0d;
+color:white;
+padding:12px 14px;
+outline:none;
+font-size:12px;
+}
+
+.admin-field input:focus,
+.admin-field textarea:focus,
+.admin-field select:focus{
+border-color:#ffe34f88;
+}
+
+.admin-field textarea{
+min-height:120px;
+resize:vertical;
+}
+
 .admin-actions{
 display:flex;
 gap:9px;
 flex-wrap:wrap;
-margin-top:15px;
+margin:15px 0;
 }
+
+.admin-divider{
+border:0;
+border-top:1px solid var(--line);
+margin:25px 0;
+}
+
 .admin-feedback{
 font-size:11px;
-color:var(--muted);
-margin-top:12px;
-min-height:18px;
+color:var(--yellow);
+margin-top:10px;
+overflow-wrap:anywhere;
 }
+
 .admin-list{
 display:grid;
 gap:10px;
-margin-top:20px;
 }
+
 .admin-post-item{
-padding:12px;
 border:1px solid var(--line);
 border-radius:12px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:10px;
+background:#ffffff04;
+padding:13px;
 }
+
 .admin-post-title{
 font-size:12px;
-font-weight:800;
+font-weight:900;
 overflow-wrap:anywhere;
+margin-bottom:10px;
 }
-.admin-post-actions{display:flex;gap:5px;flex-wrap:wrap}
-.small-btn{
-border:1px solid var(--line);
-background:#ffffff09;
-color:white;
-padding:7px 10px;
-border-radius:8px;
-font-size:10px;
-font-weight:800;
-}
-.small-btn.danger{color:#ff8b92;border-color:#ff646e33}
-.small-btn.pin{color:var(--yellow)}
-.admin-divider{border:0;border-top:1px solid var(--line);margin:22px 0}
 
-footer{
-border-top:1px solid var(--line);
-padding:25px 0;
-color:var(--muted);
-font-size:10px;
-}
-.footer-row{
+.admin-post-actions{
 display:flex;
-justify-content:space-between;
-gap:15px;
+gap:7px;
 flex-wrap:wrap;
 }
+
+.small-btn{
+border:1px solid var(--line);
+border-radius:8px;
+background:#ffffff08;
+color:#ddd;
+font-size:10px;
+font-weight:800;
+padding:7px 10px;
+}
+
+.small-btn.pin{color:var(--yellow)}
+.small-btn.danger{color:var(--red)}
+
 .to-top{
 position:fixed;
-right:22px;
-bottom:22px;
-width:43px;
-height:43px;
-border-radius:13px;
-border:1px solid #ffe34f55;
-background:#171a20;
-color:var(--yellow);
-font-size:18px;
+right:20px;
+bottom:80px;
+width:40px;
+height:40px;
 display:grid;
 place-items:center;
+border:1px solid var(--line);
+border-radius:12px;
+background:#171a22;
+color:var(--yellow);
+font-size:18px;
+z-index:70;
 opacity:0;
 pointer-events:none;
-transform:translateY(10px);
-transition:.25s;
-z-index:30;
+transition:.2s;
 }
-.to-top.visible{opacity:1;pointer-events:auto;transform:none}
-.api-status{font-size:10px;color:var(--muted);margin-top:10px}
-.api-status.error{color:#ff9292}
 
-@media(max-width:850px){
+.to-top.visible{
+opacity:1;
+pointer-events:auto;
+}
+
+/* ADMIN TABS */
+
+.admin-tabs{
+display:flex;
+gap:8px;
+margin:20px 0;
+border-bottom:1px solid var(--line);
+padding-bottom:10px;
+}
+
+.admin-tab{
+flex:1;
+padding:12px;
+border:1px solid var(--line);
+background:#ffffff08;
+color:var(--muted);
+border-radius:10px;
+font-family:inherit;
+font-size:12px;
+font-weight:900;
+cursor:pointer;
+transition:.2s;
+}
+
+.admin-tab.active{
+background:var(--yellow);
+color:#090a0d;
+border-color:var(--yellow);
+}
+
+.admin-tab-content{display:none}
+.admin-tab-content.active{display:block}
+
+.admin-post-actions{
+display:flex;
+gap:6px;
+flex-wrap:wrap;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+.hero-grid{grid-template-columns:1fr}
+.hero-art{height:330px}
+.stream-grid{grid-template-columns:1fr}
+.posts-grid,.clips-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.games-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.about-grid{grid-template-columns:1fr}
+.schedule-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:650px){
+.container{width:calc(100% - 28px)}
+.nav{height:65px}
+.menu-btn{display:block}
 .nav-links{
 display:none;
 position:absolute;
-top:76px;
+top:65px;
 left:0;
 right:0;
-padding:20px 24px;
-background:#101217;
+background:#090a0d;
+padding:20px;
+border-bottom:1px solid var(--line);
 flex-direction:column;
 align-items:flex-start;
-border-bottom:1px solid var(--line);
 }
 .nav-links.open{display:flex}
-.menu-btn{display:block}
-.nav>.button{display:none}
-.hero-grid{grid-template-columns:1fr .8fr}
-.stream-grid{grid-template-columns:1fr}
-.chat-window{min-height:320px}
-.schedule-grid{grid-template-columns:repeat(2,1fr)}
-.posts-grid{grid-template-columns:repeat(2,1fr)}
-}
-
-@media(max-width:620px){
-.container{width:calc(100% - 30px)}
-.hero{padding:45px 0 25px;min-height:auto}
-.hero-grid{grid-template-columns:1fr}
-.hero-art{height:250px;order:-1}
-.orb{width:190px}
-.orb-core{font-size:85px}
-.float-one{right:3%;top:0}
-.float-two{left:0;bottom:0}
-.hero-copy{font-size:13px}
-.section{padding:48px 0}
+.hero{padding:40px 0;min-height:auto}
+.hero-art{height:290px}
+.orb{width:220px}
+.orb-core{font-size:100px}
+.float-one{right:-5px}
+.float-two{left:-5px}
+.section{padding:45px 0}
 .section-head{align-items:flex-start;flex-direction:column}
-.section-note{margin-top:0}
-.feature-grid,.games-grid{grid-template-columns:1fr}
-.posts-grid{grid-template-columns:1fr}
-.clips-grid{grid-template-columns:1fr}
-.community{padding:25px;align-items:flex-start;flex-direction:column}
-.panel-foot{align-items:flex-start;flex-direction:column}
-.schedule-grid{gap:8px}
-.day{padding:14px}
-.day h3{font-size:17px}
-.admin-box{padding:16px}
-.admin-post-item{align-items:flex-start;flex-direction:column}
-}
-@media(prefers-reduced-motion:reduce){
-*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+.posts-grid,.clips-grid{grid-template-columns:1fr}
+.api-stats{grid-template-columns:1fr 1fr}
+.api-stats .stat:last-child{grid-column:1/-1}
+.community-box{flex-direction:column;align-items:flex-start;padding:25px}
+.admin-box{padding:18px}
+.admin-open{right:12px;bottom:12px}
+.to-top{right:12px;bottom:72px}
+.admin-tabs{gap:6px}
+.admin-tab{padding:10px 5px;font-size:11px}
 }
 </style>
 </head>
@@ -886,59 +1123,76 @@ border-bottom:1px solid var(--line);
 
 <header>
 <div class="container nav">
-<a class="brand" href="#home">
-<span class="brand-icon">ϟ</span>
-<span>PIKACHU TV<small>PLAY BEYOND LIMITS</small></span>
+
+<a href="#home" class="brand">
+<span class="brand-icon">⚡</span>
+<span>
+PIKACHU TV
+<small>PLAY BEYOND</small>
+</span>
 </a>
 
 <nav class="nav-links" id="navLinks">
-<a href="#home">Главная</a>
-<a href="#stream">Трансляция</a>
-<a href="#posts">Публикации</a>
-<a href="#about">О канале</a>
-<a href="#games">Игры</a>
-<a href="#clips">Клипы</a>
-<a href="#schedule">Расписание</a>
+<a href="#stream">СТРИМ</a>
+<a href="#posts">ПУБЛИКАЦИИ</a>
+<a href="#clips">КЛИПЫ</a>
+<a href="#about">ОБО МНЕ</a>
+<a href="#games">ИГРЫ</a>
+<a href="#schedule">РАСПИСАНИЕ</a>
 </nav>
 
-<a class="button primary" href="https://www.twitch.tv/pikachu_official_tv" target="_blank">Мой Twitch ↗</a>
-<button class="menu-btn" id="menuBtn">☰</button>
+<button class="menu-btn" id="menuBtn" aria-expanded="false">☰</button>
+
 </div>
 </header>
-
-<main>
 
 <!-- HERO -->
 
 <section class="hero" id="home">
 <div class="container hero-grid">
-<div class="hero-content">
-<div class="tag">Добро пожаловать в игровую вселенную</div>
 
-<h1>PLAY<br><span class="accent">BEYOND</span><br>LIMITS.</h1>
+<div>
+<div class="tag">Добро пожаловать в мой мир</div>
+
+<h1>
+PLAY<br>
+<span class="accent">BEYOND.</span>
+</h1>
 
 <p class="hero-copy">
-Это PIKACHU TV — место, где начинаются игровые приключения.
-Присоединяйся к трансляциям, знакомься с сообществом
-и становись частью каждого яркого момента.
+Добро пожаловать на PIKACHU TV! Здесь игры, живые эмоции,
+стримы, интересные моменты и настоящее игровое комьюнити.
+Присоединяйся и стань частью нашего приключения!
 </p>
 
 <div class="hero-actions">
-<a class="button primary" href="#stream">▶ Смотреть эфир</a>
-<a class="button ghost" href="https://www.twitch.tv/pikachu_official_tv" target="_blank">Открыть канал ↗</a>
+<a href="https://www.twitch.tv/pikachu_official_tv" target="_blank" rel="noopener" class="button primary">▶ Смотреть Twitch</a>
+<a href="#posts" class="button ghost">Последние публикации ↓</a>
 </div>
 
 <div class="hero-foot">
-<div>TWITCH CHANNEL<b>PIKACHU_OFFICIAL_TV</b></div>
-<div>CONTENT<b>GAMING • LIVE • FUN</b></div>
+<div>КАНАЛ<b>PIKACHU TV</b></div>
+<div>ПЛАТФОРМА<b>Twitch</b></div>
+<div>СТИЛЬ<b>Gaming / Community</b></div>
 </div>
 </div>
 
 <div class="hero-art">
-<div class="orb"><div class="orb-core">ϟ</div></div>
-<div class="floating float-one">⚡ PIKACHU TV<small>YOUR GAME. YOUR ENERGY.</small></div>
-<div class="floating float-two">GAMING UNIVERSE<small>WELCOME TO THE COMMUNITY</small></div>
+<div class="orb">
+<div class="orb-core">⚡</div>
 </div>
+
+<div class="floating float-one">
+<span style="color:var(--green)">● ONLINE</span>
+<small>TWITCH CHANNEL</small>
+</div>
+
+<div class="floating float-two">
+⚡ PLAY BEYOND
+<small>YOUR NEXT ADVENTURE</small>
+</div>
+</div>
+
 </div>
 </section>
 
@@ -949,54 +1203,66 @@ border-bottom:1px solid var(--line);
 
 <div class="section-head">
 <div>
-<div class="overline">LIVE CENTER / 01</div>
-<h2 class="section-title">Трансляция и чат</h2>
+<div class="overline">Прямой эфир</div>
+<h2 class="section-title">Смотри в реальном времени</h2>
 </div>
-<p class="section-note">Смотри эфир прямо на сайте. Если сейчас нет трансляции, загляни на Twitch.</p>
+<div class="section-note">Трансляция и чат Twitch прямо на сайте</div>
 </div>
 
 <div class="live-banner" id="liveBanner">
 <div>
 <strong><span class="live-dot"></span>СЕЙЧАС В ЭФИРЕ</strong>
-<p id="liveTitle"></p>
+<p id="liveTitle">Подключаемся к трансляции...</p>
 </div>
-<a class="button primary" href="https://www.twitch.tv/pikachu_official_tv" target="_blank">Присоединиться ↗</a>
+<a href="https://www.twitch.tv/pikachu_official_tv" target="_blank" rel="noopener" class="button primary">Открыть Twitch ↗</a>
 </div>
 
 <div class="api-stats">
 <div class="stat">
-<div class="stat-label">Статус канала</div>
-<div class="stat-value" id="statStatus">Проверяем…</div>
-<div class="stat-sub" id="statGame">Подключение к Twitch API</div>
+<div class="stat-label">Статус</div>
+<div class="stat-value" id="statusValue">Проверка...</div>
+<div class="stat-sub" id="statusSub">Twitch API</div>
 </div>
+
 <div class="stat">
-<div class="stat-label">Зрители сейчас</div>
-<div class="stat-value" id="statViewers">—</div>
-<div class="stat-sub">Обновление автоматически</div>
+<div class="stat-label">Зрители</div>
+<div class="stat-value" id="viewerCount">—</div>
+<div class="stat-sub">Сейчас на стриме</div>
 </div>
+
 <div class="stat">
-<div class="stat-label">Название канала</div>
-<div class="stat-value" id="statChannel" style="font-size:16px">PIKACHU TV</div>
-<div class="stat-sub" id="statUpdated">Ожидание данных</div>
+<div class="stat-label">Игра</div>
+<div class="stat-value" id="gameName">—</div>
+<div class="stat-sub">Текущая категория</div>
 </div>
 </div>
 
 <div class="stream-grid">
+
 <div class="panel">
-<div class="panel-head">ϟ PIKACHU_OFFICIAL_TV <span style="color:var(--muted)">TWITCH PLAYER</span></div>
+<div class="panel-head">
+<span>⚡ TWITCH PLAYER</span>
+<span style="color:var(--yellow)">LIVE STREAM</span>
+</div>
 <div class="player" id="player"></div>
 <div class="panel-foot">
-<span>Не отображается эфир? Открой канал напрямую.</span>
-<a class="button primary" href="https://www.twitch.tv/pikachu_official_tv" target="_blank">Смотреть на Twitch ↗</a>
+<span>PIKACHU TV · Twitch</span>
+<a href="https://www.twitch.tv/pikachu_official_tv" target="_blank" rel="noopener" class="button ghost">Открыть канал ↗</a>
 </div>
 </div>
 
 <div class="panel chat-panel">
-<div class="panel-head">💬 ЧАТ СООБЩЕСТВА</div>
+<div class="panel-head">
+<span>💬 ЧАТ</span>
+<span>TWITCH</span>
+</div>
 <div class="chat-window" id="chat"></div>
+<div class="panel-foot">
+<span>Общайся с комьюнити</span>
 </div>
 </div>
 
+</div>
 </div>
 </section>
 
@@ -1007,10 +1273,10 @@ border-bottom:1px solid var(--line);
 
 <div class="section-head">
 <div>
-<div class="overline">COMMUNITY / 02</div>
-<h2 class="section-title">Новости и публикации</h2>
+<div class="overline">Новости канала</div>
+<h2 class="section-title">Публикации</h2>
 </div>
-<p class="section-note">Все новости, объявления и игровые события PIKACHU TV.</p>
+<div class="section-note">Последние новости, анонсы и события</div>
 </div>
 
 <div class="posts-toolbar">
@@ -1022,67 +1288,10 @@ border-bottom:1px solid var(--line);
 </div>
 
 <div class="posts-grid" id="postsGrid">
-<div class="posts-loading">Загружаем публикации…</div>
+<div class="posts-loading">Загружаем публикации...</div>
 </div>
 
-<div class="api-status" id="postsStatus"></div>
-
-</div>
-</section>
-
-<!-- ABOUT -->
-
-<section class="section" id="about">
-<div class="container">
-
-<div class="section-head">
-<div>
-<div class="overline">ABOUT THE CHANNEL / 03</div>
-<h2 class="section-title">Здесь твоя территория</h2>
-</div>
-<p class="section-note">Не просто просмотр — участие в общей игровой истории.</p>
-</div>
-
-<div class="feature-grid">
-<article class="feature">
-<div class="feature-icon">🎮</div>
-<h3>Игровые приключения</h3>
-<p>Прохождения, эксперименты, новые игровые миры и открытия.</p>
-</article>
-
-<article class="feature">
-<div class="feature-icon">⚡</div>
-<h3>Энергия эфира</h3>
-<p>Живые эмоции, интересные моменты и общение во время трансляций.</p>
-</article>
-
-<article class="feature">
-<div class="feature-icon">🫶</div>
-<h3>Своё сообщество</h3>
-<p>Знакомься с другими зрителями, участвуй в обсуждениях и поддерживай канал.</p>
-</article>
-</div>
-</div>
-</section>
-
-<!-- GAMES -->
-
-<section class="section" id="games">
-<div class="container">
-
-<div class="section-head">
-<div>
-<div class="overline">GAMES / 04</div>
-<h2 class="section-title">Игровые направления</h2>
-</div>
-<p class="section-note">Игры и приключения на канале.</p>
-</div>
-
-<div class="games-grid">
-<article class="game"><div class="game-index">01 — STORY MODE</div><h3>Сюжетные приключения</h3><p>Истории, исследования и прохождения.</p></article>
-<article class="game"><div class="game-index">02 — ACTION</div><h3>Экшен и испытания</h3><p>Динамика, сложные моменты и челленджи.</p></article>
-<article class="game"><div class="game-index">03 — VARIETY</div><h3>Разные игры</h3><p>Новинки, эксперименты и игры зрителей.</p></article>
-</div>
+<div id="postsStatus" style="color:var(--muted);font-size:10px;margin-top:15px"></div>
 
 </div>
 </section>
@@ -1094,16 +1303,123 @@ border-bottom:1px solid var(--line);
 
 <div class="section-head">
 <div>
-<div class="overline">BEST MOMENTS / 05</div>
-<h2 class="section-title">Последние клипы</h2>
+<div class="overline">Лучшие моменты</div>
+<h2 class="section-title">Клипы</h2>
 </div>
-<p class="section-note">Яркие моменты с Twitch-канала.</p>
+<div class="section-note">Самые интересные моменты с трансляций</div>
 </div>
 
 <div class="clips-grid" id="clipsGrid">
-<div class="posts-empty">Загружаем клипы Twitch…</div>
+<div class="posts-loading">Загружаем клипы...</div>
 </div>
 
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+<div class="container">
+
+<div class="section-head">
+<div>
+<div class="overline">Знакомство</div>
+<h2 class="section-title">Кто такой PIKACHU TV?</h2>
+</div>
+</div>
+
+<div class="about-grid">
+
+<div class="about-copy">
+<p>
+<strong>PIKACHU TV</strong> — это игровой канал, созданный для того,
+чтобы делиться эмоциями, впечатлениями и интересными моментами
+из мира видеоигр.
+</p>
+
+<p>
+Здесь проходят прямые эфиры, появляются новые публикации,
+клипы и игровые приключения. Главная цель — создать дружное
+сообщество, в котором каждый может почувствовать себя частью команды.
+</p>
+
+<p>
+Подписывайся, участвуй в общении и не пропускай новые трансляции!
+</p>
+</div>
+
+<div class="about-cards">
+
+<div class="about-card">
+<div class="about-card-icon">🎮</div>
+<h3>Игровой контент</h3>
+<p>Разные игры, приключения и интересные моменты.</p>
+</div>
+
+<div class="about-card">
+<div class="about-card-icon">⚡</div>
+<h3>Энергия</h3>
+<p>Эмоции, впечатления и живое общение.</p>
+</div>
+
+<div class="about-card">
+<div class="about-card-icon">💬</div>
+<h3>Комьюнити</h3>
+<p>Общение и новые знакомства.</p>
+</div>
+
+<div class="about-card">
+<div class="about-card-icon">🚀</div>
+<h3>Развитие</h3>
+<p>Новые проекты и планы на будущее.</p>
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- GAMES -->
+
+<section class="section" id="games">
+<div class="container">
+
+<div class="section-head">
+<div>
+<div class="overline">Мои приключения</div>
+<h2 class="section-title">Игры</h2>
+</div>
+<div class="section-note">Игры, в которые я играю на стримах</div>
+</div>
+
+<div class="games-grid">
+
+<div class="game-card">
+<div class="game-icon">⛏️</div>
+<h3>Minecraft</h3>
+<p>Строительство и приключения</p>
+</div>
+
+<div class="game-card">
+<div class="game-icon">🚗</div>
+<h3>GTA V</h3>
+<p>Открытый мир и экшен</p>
+</div>
+
+<div class="game-card">
+<div class="game-icon">🔫</div>
+<h3>CS2</h3>
+<p>Соревновательный геймплей</p>
+</div>
+
+<div class="game-card">
+<div class="game-icon">🎯</div>
+<h3>Разные игры</h3>
+<p>Новые открытия и эксперименты</p>
+</div>
+
+</div>
 </div>
 </section>
 
@@ -1114,19 +1430,35 @@ border-bottom:1px solid var(--line);
 
 <div class="section-head">
 <div>
-<div class="overline">STREAM SCHEDULE / 06</div>
-<h2 class="section-title">Расписание эфиров</h2>
+<div class="overline">Не пропусти эфир</div>
+<h2 class="section-title">Расписание стримов</h2>
 </div>
-<p class="section-note">Следи за расписанием и объявлениями.</p>
+<div class="section-note">Время может меняться — следи за объявлениями</div>
 </div>
 
 <div class="schedule-grid">
-<article class="day"><span>ПОНЕДЕЛЬНИК</span><h3 id="dayMon">— : —</h3><p>Расписание уточняется</p></article>
-<article class="day"><span>СРЕДА</span><h3 id="dayWed">— : —</h3><p>Расписание уточняется</p></article>
-<article class="day"><span>ПЯТНИЦА</span><h3 id="dayFri">— : —</h3><p>Расписание уточняется</p></article>
-<article class="day"><span>ВЫХОДНЫЕ</span><h3 id="dayWeekend">— : —</h3><p>Следи за анонсами</p></article>
+
+<div class="schedule-card">
+<div class="schedule-day">Понедельник</div>
+<div class="schedule-time" id="dayMon">— : —</div>
 </div>
 
+<div class="schedule-card">
+<div class="schedule-day">Среда</div>
+<div class="schedule-time" id="dayWed">— : —</div>
+</div>
+
+<div class="schedule-card">
+<div class="schedule-day">Пятница</div>
+<div class="schedule-time" id="dayFri">— : —</div>
+</div>
+
+<div class="schedule-card">
+<div class="schedule-day">Выходные</div>
+<div class="schedule-time" id="dayWeekend">— : —</div>
+</div>
+
+</div>
 </div>
 </section>
 
@@ -1134,29 +1466,26 @@ border-bottom:1px solid var(--line);
 
 <section class="section">
 <div class="container">
-<div class="community">
 
+<div class="community-box">
 <div>
-<div class="overline">JOIN THE COMMUNITY / 07</div>
-<h2>Твоя поддержка заряжает! ⚡</h2>
-<p>Подпишись на PIKACHU_OFFICIAL_TV, включи уведомления и приходи на следующий эфир. Увидимся в чате!</p>
+<h2>Присоединяйся к приключению!</h2>
+<p>Подписывайся на Twitch, участвуй в чатах и следи за новыми публикациями PIKACHU TV.</p>
 </div>
 
-<div class="social-links">
-<a href="https://www.twitch.tv/pikachu_official_tv" target="_blank">🟣 Twitch</a>
-<a href="#stream">▶ Смотреть эфир</a>
+<a href="https://www.twitch.tv/pikachu_official_tv" target="_blank" rel="noopener" class="button primary">Подписаться на Twitch ↗</a>
 </div>
 
-</div>
 </div>
 </section>
 
-</main>
+<!-- FOOTER -->
 
 <footer>
-<div class="container footer-row">
-<span>© <span id="year"></span> PIKACHU TV. Все права защищены.</span>
-<span>PLAY BEYOND LIMITS · GAMING UNIVERSE</span>
+<div class="container footer-inner">
+<div class="footer-brand">⚡ PIKACHU TV</div>
+<div class="footer-note">PLAY BEYOND · © <span id="year"></span></div>
+<a href="https://www.twitch.tv/pikachu_official_tv" target="_blank" rel="noopener" class="footer-note">Twitch ↗</a>
 </div>
 </footer>
 
@@ -1164,7 +1493,7 @@ border-bottom:1px solid var(--line);
 
 <!-- ADMIN BUTTON -->
 
-<button class="admin-open" id="adminOpen">⚙ Панель управления</button>
+<button class="admin-open" id="adminOpen" type="button">⚙ Панель управления</button>
 
 <!-- ADMIN MODAL -->
 
@@ -1173,26 +1502,33 @@ border-bottom:1px solid var(--line);
 <div class="admin-box">
 
 <div class="admin-head">
-<h3>⚙ Управление публикациями</h3>
-<button class="admin-close" id="adminClose">✕</button>
+<h3>⚙ Панель управления PIKACHU TV</h3>
+<button class="admin-close" id="adminClose" type="button">✕</button>
 </div>
 
 <div class="admin-field">
-<label>ПАРОЛЬ АДМИНИСТРАТОРА</label>
+<label for="adminToken">ПАРОЛЬ АДМИНИСТРАТОРА</label>
 <input id="adminToken" type="password" autocomplete="current-password" placeholder="Введи ADMIN_TOKEN">
 </div>
 
-<hr class="admin-divider">
+<div class="admin-tabs" role="tablist">
+<button class="admin-tab active" type="button" role="tab" aria-selected="true" data-tab="posts">📝 Публикации</button>
+<button class="admin-tab" type="button" role="tab" aria-selected="false" data-tab="schedule">📅 Расписание</button>
+</div>
+
+<!-- TAB: POSTS -->
+
+<section class="admin-tab-content active" id="tab-posts" role="tabpanel">
 
 <h3 id="editorTitle">✍ Создать публикацию</h3>
 
 <div class="admin-field">
-<label>ЗАГОЛОВОК</label>
+<label for="postTitle">ЗАГОЛОВОК</label>
 <input id="postTitle" maxlength="200" placeholder="Заголовок публикации">
 </div>
 
 <div class="admin-field">
-<label>ТИП ПУБЛИКАЦИИ</label>
+<label for="postType">ТИП ПУБЛИКАЦИИ</label>
 <select id="postType">
 <option value="normal">Обычная публикация</option>
 <option value="news">Новость</option>
@@ -1203,70 +1539,78 @@ border-bottom:1px solid var(--line);
 </div>
 
 <div class="admin-field">
-<label>ТЕКСТ ПУБЛИКАЦИИ</label>
+<label for="postContent">ТЕКСТ ПУБЛИКАЦИИ</label>
 <textarea id="postContent" placeholder="Напиши текст публикации..."></textarea>
 </div>
 
 <div class="admin-field">
-<label>ССЫЛКА НА ИЗОБРАЖЕНИЕ (НЕОБЯЗАТЕЛЬНО)</label>
+<label for="postImage">ССЫЛКА НА ИЗОБРАЖЕНИЕ (НЕОБЯЗАТЕЛЬНО)</label>
 <input id="postImage" type="url" placeholder="https://example.com/image.jpg">
 </div>
 
 <div class="admin-actions">
-<button class="button primary" id="postSave">Опубликовать</button>
-<button class="button ghost" id="postCancel" style="display:none">Отмена редактирования</button>
+<button class="button primary" id="postSave" type="button">Опубликовать</button>
+<button class="button ghost" id="postCancel" type="button" style="display:none">Отмена редактирования</button>
+<button class="button ghost" id="postsReload" type="button">Обновить список</button>
 </div>
 
-<div class="admin-feedback" id="adminFeedback"></div>
+<div class="admin-feedback" id="adminFeedback" role="status"></div>
 
 <hr class="admin-divider">
 
-<h3>📚 Управление опубликованными постами</h3>
+<h3>📚 Опубликованные материалы</h3>
 
 <div class="admin-list" id="adminPosts">
 Загрузка списка...
 </div>
 
-<hr class="admin-divider">
+</section>
 
-<h3>📅 Расписание и объявление</h3>
+<!-- TAB: SCHEDULE -->
+
+<section class="admin-tab-content" id="tab-schedule" role="tabpanel">
+
+<h3>📅 Управление расписанием</h3>
 
 <div class="admin-field">
-<label>ОБЪЯВЛЕНИЕ НА САЙТЕ</label>
+<label for="adminAnnouncement">ОБЪЯВЛЕНИЕ НА САЙТЕ</label>
 <textarea id="adminAnnouncement" placeholder="Например: Сегодня стрим в 19:00!"></textarea>
 </div>
 
 <div class="admin-field">
-<label>ПОНЕДЕЛЬНИК</label>
+<label for="adminMon">ПОНЕДЕЛЬНИК</label>
 <input id="adminMon" placeholder="Например: 19:00">
 </div>
 
 <div class="admin-field">
-<label>СРЕДА</label>
+<label for="adminWed">СРЕДА</label>
 <input id="adminWed" placeholder="Например: 19:00">
 </div>
 
 <div class="admin-field">
-<label>ПЯТНИЦА</label>
+<label for="adminFri">ПЯТНИЦА</label>
 <input id="adminFri" placeholder="Например: 20:00">
 </div>
 
 <div class="admin-field">
-<label>ВЫХОДНЫЕ</label>
+<label for="adminWeekend">ВЫХОДНЫЕ</label>
 <input id="adminWeekend" placeholder="Например: По договорённости">
 </div>
 
 <div class="admin-actions">
-<button class="button primary" id="configSave">Сохранить настройки</button>
-<button class="button ghost" id="configReload">Загрузить настройки</button>
+<button class="button primary" id="configSave" type="button">Сохранить расписание</button>
+<button class="button ghost" id="configReload" type="button">Загрузить настройки</button>
 </div>
 
-<div class="admin-feedback" id="configFeedback"></div>
+<div class="admin-feedback" id="configFeedback" role="status"></div>
+
+</section>
 
 </div>
 </div>
 
 <script>
+
 /* =========================
    CONFIGURATION
 ========================= */
@@ -1369,21 +1713,46 @@ scrollTo({top:0,behavior:'smooth'});
 
 async function api(path,options={}){
 
-const response = await fetch(
-API_BASE.replace(/\/$/,'') + path,
-options
-);
+const cleanBase = API_BASE.replace(/\/+$/,'');
+const cleanPath = path.startsWith('/') ? path : '/'+path;
+const url = cleanBase + cleanPath;
+
+const headers = new Headers(options.headers || {});
+
+if(options.body && !headers.has('Content-Type')){
+headers.set('Content-Type','application/json');
+}
+
+let response;
+
+try{
+response = await fetch(url,{
+...options,
+headers
+});
+}catch(error){
+throw new Error('Не удалось подключиться к Worker: '+error.message);
+}
 
 const data = await response.json().catch(()=>{
-return {error:'Сервер вернул некорректный ответ'};
+return {
+error:'Worker вернул некорректный ответ (HTTP '+response.status+')'
+};
 });
 
-if(!response.ok){
-throw new Error(data.error || `Ошибка API: ${response.status}`);
+if(!response.ok || data.ok === false){
+throw new Error(
+(data.error || data.message || 'Ошибка API')+
+' (HTTP '+response.status+', '+cleanPath+')'
+);
 }
 
 return data;
 }
+
+/* =========================
+   HELPERS
+========================= */
 
 function safeText(value){
 return String(value ?? '').replace(/[&<>"']/g,c=>({
@@ -1401,8 +1770,13 @@ return new Intl.NumberFormat('ru-RU').format(n || 0);
 
 function formatDate(date){
 if(!date)return '';
-const parsed = new Date(date.replace(' ','T')+'Z');
+
+const parsed = new Date(
+date.includes('T') ? date : date.replace(' ','T')+'Z'
+);
+
 if(Number.isNaN(parsed.getTime()))return date;
+
 return parsed.toLocaleString('ru-RU',{
 day:'2-digit',
 month:'long',
@@ -1416,45 +1790,38 @@ minute:'2-digit'
    TWITCH STATUS
 ========================= */
 
-let previousLive = false;
-
 async function loadStatus(){
 
 try{
 
 const data = await api('/api/status');
-const live = !!data.live;
 
-$('statStatus').textContent = live ? 'В ЭФИРЕ' : 'НЕ В ЭФИРЕ';
-$('statStatus').style.color = live ? '#ff777f' : 'var(--white)';
+const live = Boolean(data.live);
 
-$('statGame').textContent = live
-? (data.game_name || 'Категория не указана')
-: 'Когда начнётся эфир, статус обновится здесь';
+$('statusValue').textContent = live ? 'В ЭФИРЕ' : 'НЕ В ЭФИРЕ';
+$('statusValue').style.color = live ? 'var(--red)' : 'var(--muted)';
 
-$('statViewers').textContent = live
-? formatNumber(data.viewer_count)
-: '0';
+$('statusSub').textContent = live
+? 'Трансляция запущена'
+: 'Ожидаем следующего стрима';
 
-$('statChannel').textContent = data.display_name || 'PIKACHU TV';
+$('viewerCount').textContent = formatNumber(data.viewer_count || 0);
+$('gameName').textContent = data.game_name || '—';
 
-$('statUpdated').textContent =
-'Обновлено: ' +
-new Date().toLocaleTimeString('ru-RU',{
-hour:'2-digit',
-minute:'2-digit'
-});
+const banner = $('liveBanner');
 
-$('liveBanner').classList.toggle('active',live);
-$('liveTitle').textContent = live ? (data.title || 'Прямой эфир') : '';
+banner.classList.toggle('active',live);
 
-previousLive = live;
+if(live){
+$('liveTitle').textContent = data.title || 'Трансляция уже началась!';
+}
 
 }catch(error){
 
-$('statStatus').textContent = 'Недоступно';
-$('statGame').textContent = 'Проверь подключение';
-console.error('Twitch API:',error);
+$('statusValue').textContent = 'НЕДОСТУПНО';
+$('statusSub').textContent = 'Не удалось подключиться к Twitch API';
+
+console.warn('Status:',error);
 
 }
 }
@@ -1473,50 +1840,39 @@ const data = await api('/api/clips');
 const clips = data.clips || [];
 
 if(!clips.length){
-
-grid.innerHTML = `
-<div class="posts-empty">
-Пока нет клипов. Они появятся здесь, когда будут созданы на Twitch.
-</div>`;
-
+grid.innerHTML='<div class="posts-empty">Клипы пока не появились.</div>';
 return;
 }
 
-grid.innerHTML = clips.map(c=>`
-
+grid.innerHTML=clips.map(clip=>`
 <a class="clip-card"
-href="${safeText(c.url)}"
+href="${safeText(clip.url)}"
 target="_blank"
 rel="noopener">
 
-<div class="clip-thumb">
-<img loading="lazy"
-src="${safeText(c.thumbnail_url)}"
-alt="">
+<div class="clip-image">
+<img src="${safeText(clip.thumbnail_url)}"
+alt="${safeText(clip.title)}"
+loading="lazy">
+
+<div class="clip-play">▶</div>
 </div>
 
-<div class="clip-info">
-
-<div class="clip-title">
-${safeText(c.title)}
-</div>
-
+<div class="clip-body">
+<h3 class="clip-title">${safeText(clip.title)}</h3>
 <div class="clip-meta">
-<span>▶ ${formatNumber(c.view_count)} просмотров</span>
-<span>${safeText(c.creator_name || 'Twitch')}</span>
+${safeText(clip.creator_name || 'Twitch')}
+ · ${formatNumber(clip.view_count)} просмотров
+</div>
 </div>
 
-</div>
 </a>
-
 `).join('');
 
 }catch(error){
 
-grid.innerHTML = `
-<div class="posts-empty">
-Не удалось загрузить клипы Twitch.
-</div>`;
+grid.innerHTML='<div class="posts-empty">Не удалось загрузить клипы.</div>';
+console.warn('Clips:',error);
 
 }
 }
@@ -1529,7 +1885,7 @@ async function loadPosts(){
 
 const grid = $('postsGrid');
 
-grid.innerHTML = '<div class="posts-loading">Загружаем публикации…</div>';
+grid.innerHTML='<div class="posts-loading">Загружаем публикации…</div>';
 
 try{
 
@@ -1540,18 +1896,18 @@ cachedPosts = data.posts || [];
 renderPosts();
 renderAdminPosts();
 
-$('postsStatus').textContent =
+$('postsStatus').textContent=
 `Загружено публикаций: ${cachedPosts.length}`;
 
 }catch(error){
 
-grid.innerHTML = `
+grid.innerHTML=`
 <div class="posts-empty">
 Не удалось загрузить публикации.<br>
 ${safeText(error.message)}
 </div>`;
 
-$('postsStatus').textContent = 'Ошибка подключения к API';
+$('postsStatus').textContent='Ошибка подключения к API';
 
 }
 }
@@ -1560,7 +1916,7 @@ $('postsStatus').textContent = 'Ошибка подключения к API';
    POSTS: RENDER
 ========================= */
 
-const typeLabels = {
+const typeLabels={
 normal:'Публикация',
 news:'Новости',
 announcement:'Объявление',
@@ -1570,24 +1926,25 @@ game:'Игры'
 
 function renderPosts(){
 
-const grid = $('postsGrid');
+const grid=$('postsGrid');
 
-let posts = [...cachedPosts];
+let posts=[...cachedPosts];
 
-if(currentFilter !== 'all'){
-posts = posts.filter(p=>p.post_type === currentFilter);
+if(currentFilter!=='all'){
+posts=posts.filter(p=>p.post_type===currentFilter);
 }
 
 posts.sort((a,b)=>{
-if(Number(b.is_pinned) !== Number(a.is_pinned)){
-return Number(b.is_pinned) - Number(a.is_pinned);
+if(Number(b.is_pinned)!==Number(a.is_pinned)){
+return Number(b.is_pinned)-Number(a.is_pinned);
 }
-return new Date(b.created_at) - new Date(a.created_at);
+
+return new Date(b.created_at)-new Date(a.created_at);
 });
 
 if(!posts.length){
 
-grid.innerHTML = `
+grid.innerHTML=`
 <div class="posts-empty">
 Публикаций пока нет.<br>
 Загляни сюда позже!
@@ -1596,36 +1953,36 @@ grid.innerHTML = `
 return;
 }
 
-grid.innerHTML = posts.map(post=>{
+grid.innerHTML=posts.map(post=>{
 
-const type = post.post_type || 'normal';
+const type=post.post_type||'normal';
 
 return `
 <article class="post-card">
 
-${Number(post.is_pinned) ? '<div class="pinned-label">📌 ЗАКРЕПЛЕНО</div>' : ''}
+${Number(post.is_pinned)
+? '<div class="pinned-label">📌 ЗАКРЕПЛЕНО</div>'
+: ''}
 
-${post.image_url ? `
+${post.image_url?`
 <img class="post-image"
 src="${safeText(post.image_url)}"
 loading="lazy"
 alt="${safeText(post.title)}"
 onerror="this.style.display='none'">
-` : ''}
+`:''}
 
 <div class="post-body">
 
 <span class="post-type ${safeText(type)}">
-${safeText(typeLabels[type] || 'Публикация')}
+${safeText(typeLabels[type]||'Публикация')}
 </span>
 
 <h3 class="post-title">${safeText(post.title)}</h3>
 
 <div class="post-content">${safeText(post.content)}</div>
 
-<div class="post-date">
-${formatDate(post.created_at)}
-</div>
+<div class="post-date">${formatDate(post.created_at)}</div>
 
 </div>
 </article>
@@ -1649,7 +2006,7 @@ b.classList.remove('active');
 
 button.classList.add('active');
 
-currentFilter = button.dataset.filter;
+currentFilter=button.dataset.filter;
 
 renderPosts();
 
@@ -1661,10 +2018,40 @@ renderPosts();
    ADMIN MODAL
 ========================= */
 
-const adminModal = $('adminModal');
+const adminModal=$('adminModal');
+
+/* Переключение вкладок */
+
+document.querySelectorAll('.admin-tab').forEach(tab=>{
+
+tab.addEventListener('click',()=>{
+
+document.querySelectorAll('.admin-tab').forEach(t=>{
+t.classList.toggle('active',t===tab);
+t.setAttribute('aria-selected',String(t===tab));
+});
+
+document.querySelectorAll('.admin-tab-content').forEach(panel=>{
+panel.classList.toggle('active',panel.id==='tab-'+tab.dataset.tab);
+});
+
+if(tab.dataset.tab==='posts'){
+loadPosts();
+}
+
+if(tab.dataset.tab==='schedule'){
+loadAdminData();
+}
+
+});
+
+});
+
+$('postsReload').addEventListener('click',loadPosts);
 
 $('adminOpen').addEventListener('click',()=>{
 adminModal.classList.add('open');
+loadPosts();
 loadAdminData();
 });
 
@@ -1673,10 +2060,20 @@ adminModal.classList.remove('open');
 });
 
 adminModal.addEventListener('click',e=>{
-if(e.target === adminModal){
+if(e.target===adminModal){
 adminModal.classList.remove('open');
 }
 });
+
+document.addEventListener('keydown',e=>{
+if(e.key==='Escape'){
+adminModal.classList.remove('open');
+}
+});
+
+/* =========================
+   ADMIN AUTH
+========================= */
 
 function getAdminToken(){
 return $('adminToken').value.trim();
@@ -1695,11 +2092,11 @@ return {
 
 function renderAdminPosts(){
 
-const list = $('adminPosts');
+const list=$('adminPosts');
 
 if(!cachedPosts.length){
 
-list.innerHTML = `
+list.innerHTML=`
 <div style="color:var(--muted);font-size:12px">
 Публикаций пока нет.
 </div>`;
@@ -1707,34 +2104,36 @@ list.innerHTML = `
 return;
 }
 
-list.innerHTML = cachedPosts.map(post=>`
+list.innerHTML=cachedPosts.map(post=>`
 
 <div class="admin-post-item">
 
 <div class="admin-post-title">
-${Number(post.is_pinned) ? '📌 ' : ''}
+${Number(post.is_pinned)?'📌 ':''}
 ${safeText(post.title)}
 </div>
 
 <div class="admin-post-actions">
 
-<button class="small-btn pin"
-onclick="togglePin(${post.id},${Number(post.is_pinned)})">
-${Number(post.is_pinned) ? 'Открепить' : 'Закрепить'}
+<button type="button"
+class="small-btn pin"
+onclick="togglePin(${Number(post.id)},${Number(post.is_pinned)})">
+${Number(post.is_pinned)?'Открепить':'Закрепить'}
 </button>
 
-<button class="small-btn"
-onclick="editPost(${post.id})">
+<button type="button"
+class="small-btn"
+onclick="editPost(${Number(post.id)})">
 ✏️ Изменить
 </button>
 
-<button class="small-btn danger"
-onclick="deletePost(${post.id})">
+<button type="button"
+class="small-btn danger"
+onclick="deletePost(${Number(post.id)})">
 🗑 Удалить
 </button>
 
 </div>
-
 </div>
 
 `).join('');
@@ -1749,30 +2148,33 @@ $('postSave').addEventListener('click',savePost);
 
 async function savePost(){
 
-const token = getAdminToken();
+const token=getAdminToken();
 
 if(!token){
-$('adminFeedback').textContent =
-'Сначала введи пароль администратора.';
+$('adminFeedback').textContent='Сначала введи пароль администратора.';
 return;
 }
 
-const title = $('postTitle').value.trim();
-const content = $('postContent').value.trim();
+const title=$('postTitle').value.trim();
+const content=$('postContent').value.trim();
 
-if(!title || !content){
-$('adminFeedback').textContent =
-'Заполни заголовок и текст публикации.';
+if(!title||!content){
+$('adminFeedback').textContent='Заполни заголовок и текст публикации.';
 return;
 }
 
-const payload = {
+const payload={
 title,
 content,
 image_url:$('postImage').value.trim(),
 post_type:$('postType').value,
 is_pinned:0
 };
+
+const button=$('postSave');
+
+button.disabled=true;
+button.textContent='Сохранение…';
 
 try{
 
@@ -1784,8 +2186,7 @@ headers:authHeaders(),
 body:JSON.stringify(payload)
 });
 
-$('adminFeedback').textContent =
-'Публикация успешно обновлена!';
+$('adminFeedback').textContent='Публикация успешно обновлена!';
 
 }else{
 
@@ -1795,8 +2196,7 @@ headers:authHeaders(),
 body:JSON.stringify(payload)
 });
 
-$('adminFeedback').textContent =
-'Публикация успешно создана!';
+$('adminFeedback').textContent='Публикация успешно создана!';
 
 }
 
@@ -1805,8 +2205,14 @@ await loadPosts();
 
 }catch(error){
 
-$('adminFeedback').textContent =
-'Ошибка: '+error.message;
+$('adminFeedback').textContent='Ошибка: '+error.message;
+
+}finally{
+
+button.disabled=false;
+button.textContent=editingPostId
+?'Сохранить изменения'
+:'Опубликовать';
 
 }
 
@@ -1816,25 +2222,24 @@ $('adminFeedback').textContent =
    ADMIN: EDIT
 ========================= */
 
-window.editPost = function(id){
+window.editPost=function(id){
 
-const post = cachedPosts.find(p=>Number(p.id) === Number(id));
+const post=cachedPosts.find(p=>Number(p.id)===Number(id));
 
 if(!post)return;
 
-editingPostId = id;
+editingPostId=id;
 
-$('editorTitle').textContent = '✏️ Редактирование публикации';
-$('postTitle').value = post.title || '';
-$('postContent').value = post.content || '';
-$('postImage').value = post.image_url || '';
-$('postType').value = post.post_type || 'normal';
+$('editorTitle').textContent='✏️ Редактирование публикации';
+$('postTitle').value=post.title||'';
+$('postContent').value=post.content||'';
+$('postImage').value=post.image_url||'';
+$('postType').value=post.post_type||'normal';
 
-$('postSave').textContent = 'Сохранить изменения';
-$('postCancel').style.display = 'inline-flex';
+$('postSave').textContent='Сохранить изменения';
+$('postCancel').style.display='inline-flex';
 
-$('adminFeedback').textContent =
-'Редактируешь публикацию №'+id;
+$('adminFeedback').textContent='Редактируешь публикацию №'+id;
 
 $('editorTitle').scrollIntoView({
 behavior:'smooth',
@@ -1851,16 +2256,18 @@ $('postCancel').addEventListener('click',resetEditor);
 
 function resetEditor(){
 
-editingPostId = null;
+editingPostId=null;
 
-$('editorTitle').textContent = '✍ Создать публикацию';
-$('postTitle').value = '';
-$('postContent').value = '';
-$('postImage').value = '';
-$('postType').value = 'normal';
+$('editorTitle').textContent='✍ Создать публикацию';
+$('postTitle').value='';
+$('postContent').value='';
+$('postImage').value='';
+$('postType').value='normal';
 
-$('postSave').textContent = 'Опубликовать';
-$('postCancel').style.display = 'none';
+$('postSave').textContent='Опубликовать';
+$('postCancel').style.display='none';
+
+$('adminFeedback').textContent='';
 
 }
 
@@ -1868,14 +2275,14 @@ $('postCancel').style.display = 'none';
    ADMIN: DELETE
 ========================= */
 
-window.deletePost = async function(id){
+window.deletePost=async function(id){
 
 if(!getAdminToken()){
 alert('Сначала введи пароль администратора в панели.');
 return;
 }
 
-const confirmed = confirm(
+const confirmed=confirm(
 'Точно удалить публикацию №'+id+'? Это действие нельзя отменить.'
 );
 
@@ -1888,8 +2295,7 @@ method:'DELETE',
 headers:authHeaders()
 });
 
-$('adminFeedback').textContent =
-'Публикация удалена.';
+$('adminFeedback').textContent='Публикация удалена.';
 
 await loadPosts();
 
@@ -1905,10 +2311,10 @@ alert('Ошибка удаления: '+error.message);
    ADMIN: PIN
 ========================= */
 
-window.togglePin = async function(id,isPinned){
+window.togglePin=async function(id,isPinned){
 
 if(!getAdminToken()){
-alert('Сначала введи пароль администратора.');
+alert('Сначала введи пароль администратора в панели.');
 return;
 }
 
@@ -1922,8 +2328,8 @@ is_pinned:!Boolean(isPinned)
 })
 });
 
-$('adminFeedback').textContent =
-isPinned ? 'Публикация откреплена.' : 'Публикация закреплена.';
+$('adminFeedback').textContent=
+isPinned?'Публикация откреплена.':'Публикация закреплена.';
 
 await loadPosts();
 
@@ -1945,21 +2351,20 @@ $('configFeedback').textContent='Загружаем настройки…';
 
 try{
 
-const cfg = await api('/api/config');
+const cfg=await api('/api/config');
 
-$('adminAnnouncement').value = cfg.announcement || '';
+$('adminAnnouncement').value=cfg.announcement||'';
 
-$('adminMon').value = cfg.schedule?.monday || '';
-$('adminWed').value = cfg.schedule?.wednesday || '';
-$('adminFri').value = cfg.schedule?.friday || '';
-$('adminWeekend').value = cfg.schedule?.weekend || '';
+$('adminMon').value=cfg.schedule?.monday||'';
+$('adminWed').value=cfg.schedule?.wednesday||'';
+$('adminFri').value=cfg.schedule?.friday||'';
+$('adminWeekend').value=cfg.schedule?.weekend||'';
 
 $('configFeedback').textContent='Настройки загружены.';
 
 }catch(error){
 
-$('configFeedback').textContent =
-'Ошибка загрузки: '+error.message;
+$('configFeedback').textContent='Ошибка загрузки: '+error.message;
 
 }
 
@@ -1978,13 +2383,19 @@ async function loadPublicConfig(){
 
 try{
 
-const cfg = await api('/api/config');
+const cfg=await api('/api/config');
 
 renderSchedule(cfg);
 
+const oldAnnouncement=document.querySelector('#about .live-banner');
+
+if(oldAnnouncement){
+oldAnnouncement.remove();
+}
+
 if(cfg.announcement){
 
-const node = document.createElement('div');
+const node=document.createElement('div');
 
 node.className='live-banner active';
 node.style.borderColor='#ffe34f55';
@@ -2015,26 +2426,26 @@ console.warn('Config:',error);
 
 $('configSave').addEventListener('click',async()=>{
 
-const token = getAdminToken();
+const token=getAdminToken();
 
 if(!token){
-$('configFeedback').textContent =
-'Введи пароль администратора.';
+$('configFeedback').textContent='Введи пароль администратора.';
 return;
 }
 
-const payload = {
-
+const payload={
 announcement:$('adminAnnouncement').value.trim(),
-
 schedule:{
 monday:$('adminMon').value.trim(),
 wednesday:$('adminWed').value.trim(),
 friday:$('adminFri').value.trim(),
 weekend:$('adminWeekend').value.trim()
 }
-
 };
+
+const button=$('configSave');
+button.disabled=true;
+button.textContent='Сохранение…';
 
 try{
 
@@ -2044,16 +2455,19 @@ headers:authHeaders(),
 body:JSON.stringify(payload)
 });
 
-$('configFeedback').textContent =
-'Настройки успешно сохранены!';
+$('configFeedback').textContent='Настройки успешно сохранены!';
 
 renderSchedule(payload);
-loadPublicConfig();
+await loadPublicConfig();
 
 }catch(error){
 
-$('configFeedback').textContent =
-'Ошибка сохранения: '+error.message;
+$('configFeedback').textContent='Ошибка сохранения: '+error.message;
+
+}finally{
+
+button.disabled=false;
+button.textContent='Сохранить расписание';
 
 }
 
