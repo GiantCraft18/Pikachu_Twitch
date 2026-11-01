@@ -1537,6 +1537,7 @@ PLAY<br>
 <div class="admin-tabs" role="tablist">
 <button class="admin-tab active" type="button" role="tab" aria-selected="true" data-tab="posts">📝 Публикации</button>
 <button class="admin-tab" type="button" role="tab" aria-selected="false" data-tab="schedule">📅 Расписание</button>
+<button class="admin-tab" type="button" role="tab" aria-selected="false" data-tab="games">🎮 Игры</button>
 </div>
 
 <!-- TAB: POSTS -->
@@ -1587,6 +1588,19 @@ PLAY<br>
 Загрузка списка...
 </div>
 
+</section>
+
+<!-- TAB: GAMES -->
+<section class="admin-tab-content" id="tab-games" role="tabpanel">
+<h3>🎮 Управление игровыми карточками</h3>
+<div class="admin-field"><label>НАЗВАНИЕ</label><input id="gameNameInput" placeholder="Minecraft"></div>
+<div class="admin-field"><label>ОПИСАНИЕ</label><input id="gameDescInput" placeholder="Строительство и приключения"></div>
+<div class="admin-field"><label>ЭМОДЗИ / ИКОНКА</label><input id="gameIconInput" placeholder="⛏️"></div>
+<div class="admin-field"><label>URL ОБЛОЖКИ (необязательно)</label><input id="gameImageInput" type="url" placeholder="https://..."></div>
+<div class="admin-field"><label>ССЫЛКА (необязательно)</label><input id="gameLinkInput" type="url" placeholder="https://..."></div>
+<div class="admin-field"><label>БЕЙДЖ (необязательно)</label><input id="gameBadgeInput" placeholder="Новинка / Популярное"></div>
+<div class="admin-actions"><button class="button primary" id="gameSave" type="button">Добавить игру</button><button class="button ghost" id="gameCancel" type="button">Очистить</button><button class="button ghost" id="gamesReload" type="button">Обновить</button></div>
+<div class="admin-feedback" id="gamesFeedback" role="status"></div><hr class="admin-divider"><div class="admin-list" id="adminGames">Загрузка игр...</div>
 </section>
 
 <!-- TAB: SCHEDULE -->
@@ -2086,6 +2100,14 @@ loadAdminData();
 });
 
 $('postsReload').addEventListener('click',loadPosts);
+
+// GAMES: public read + protected management
+let editingGameId=null;
+function gameCard(g){return `<article class="game-card">${g.image?`<img src="${safeUrl(g.image)}" alt="${safeText(g.name)}" style="width:100%;height:110px;object-fit:cover;border-radius:10px">`:''}<div class="game-icon">${safeText(g.icon||'🎮')}</div>${g.badge?`<span class="tag">${safeText(g.badge)}</span>`:''}<h3>${safeText(g.name)}</h3><p>${safeText(g.description||'')}</p>${g.url?`<a href="${safeUrl(g.url)}" target="_blank" rel="noopener">Подробнее ↗</a>`:''}</article>`}
+async function loadGames(){try{const d=await api('/api/games');const arr=d.games||[];$('adminGames').innerHTML=arr.length?arr.map(g=>`<div class="admin-list-item"><b>${safeText(g.icon||'🎮')} ${safeText(g.name)}</b><small>${safeText(g.description||'')}</small><div><button class="button ghost" data-game-edit="${safeText(g.id)}">Изменить</button> <button class="button ghost" data-game-delete="${safeText(g.id)}">Удалить</button></div></div>`).join(''):'Игровых карточек пока нет.';document.querySelector('.games-grid').innerHTML=arr.map(gameCard).join('');$('adminGames').querySelectorAll('[data-game-edit]').forEach(b=>b.onclick=()=>{const g=arr.find(x=>x.id===b.dataset.gameEdit);if(!g)return;editingGameId=g.id;$('gameNameInput').value=g.name||'';$('gameDescInput').value=g.description||'';$('gameIconInput').value=g.icon||'';$('gameImageInput').value=g.image||'';$('gameLinkInput').value=g.url||'';$('gameBadgeInput').value=g.badge||'';$('gameSave').textContent='Сохранить изменения';});$('adminGames').querySelectorAll('[data-game-delete]').forEach(b=>b.onclick=async()=>{if(!confirm('Удалить эту карточку?'))return;await api('/api/games',{method:'POST',headers:{Authorization:'Bearer '+$('adminToken').value},body:JSON.stringify({action:'delete',id:b.dataset.gameDelete})});await loadGames();});}catch(e){$('adminGames').textContent=e.message;}}
+$('gameSave').addEventListener('click',async()=>{const name=$('gameNameInput').value.trim();if(!name){$('gamesFeedback').textContent='Укажи название игры.';return;}const game={id:editingGameId||('game-'+Date.now()),name,description:$('gameDescInput').value.trim(),icon:$('gameIconInput').value.trim()||'🎮',image:$('gameImageInput').value.trim(),url:$('gameLinkInput').value.trim(),badge:$('gameBadgeInput').value.trim()};try{await api('/api/games',{method:'POST',headers:{Authorization:'Bearer '+$('adminToken').value},body:JSON.stringify({action:editingGameId?'update':'add',game})});editingGameId=null;$('gameSave').textContent='Добавить игру';$('gamesFeedback').textContent='Сохранено!';await loadGames();}catch(e){$('gamesFeedback').textContent=e.message;}});
+$('gameCancel').onclick=()=>{editingGameId=null;['gameNameInput','gameDescInput','gameIconInput','gameImageInput','gameLinkInput','gameBadgeInput'].forEach(id=>$(id).value='');$('gameSave').textContent='Добавить игру';};$('gamesReload').onclick=loadGames;
+loadGames();
 
 $('adminOpen').addEventListener('click',()=>{
 adminModal.classList.add('open');
