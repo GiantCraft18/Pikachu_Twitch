@@ -6,6 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#090a0d">
 <meta name="description" content="PIKACHU TV — игровой канал, прямые эфиры и сообщество.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PIKACHU TV — Play Beyond">
+<meta property="og:description" content="Игры, прямые эфиры, клипы и игровое сообщество.">
+<meta name="twitter:card" content="summary_large_image">
+
 <title>PIKACHU TV — Play Beyond</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1114,6 +1120,23 @@ align-items:flex-start;
 .admin-tabs{gap:6px}
 .admin-tab{padding:10px 5px;font-size:11px}
 }
+
+/* POLISH / ACCESSIBILITY */
+::selection{background:var(--yellow);color:#090a0d}
+:focus-visible{outline:2px solid var(--yellow);outline-offset:4px}
+button:disabled{opacity:.55;cursor:not-allowed}
+.panel,.post-card,.clip-card,.game-card,.schedule-card,.about-card{
+  will-change:transform;
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+    scroll-behavior:auto!important;
+  }
+}
+
 </style>
 </head>
 
